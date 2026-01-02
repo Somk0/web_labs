@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD — Автобуси</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Система керування автобусами</h1>
+
+  
+  <input type="text" id="search" placeholder="Пошук за маршрутом або водієм">
+
+  
+  <form id="busForm" onsubmit="saveBus(event)">
+    <h3 id="formTitle">Додати автобус</h3>
+    <input type="hidden" id="editIndex">
+    <input type="text" id="route" placeholder="Маршрут" required>
+    <input type="text" id="driver" placeholder="Водій" required>
+    <input type="number" id="seats" placeholder="Кількість місць" required min="1">
+    <input type="number" id="price" placeholder="Ціна квитка (грн)" required min="1">
+    <button type="submit">Зберегти</button>
+    <button type="button" id="cancelEdit" onclick="cancelEditMode()" style="display:none;">Скасувати</button>
+  </form>
+
+ 
+  <div class="btn-group">
+    <button onclick="sortBySeats()">Сортувати за місцями</button>
+    <button onclick="sortByPrice()">Сортувати за ціною</button>
+    <button onclick="countSeats()">Порахувати всі місця</button>
+    <button onclick="countTotalPrice()">Порахувати загальну ціну</button>
+  </div>
+
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Маршрут</th>
+        <th>Водій</th>
+        <th>Місць</th>
+        <th>Ціна</th>
+        <th>Дії</th>
+      </tr>
+    </thead>
+    <tbody id="busTable"></tbody>
+  </table>
+
+
+  <p id="seatResult"></p>
+  <p id="priceResult"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

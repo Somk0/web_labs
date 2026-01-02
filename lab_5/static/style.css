@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container, .search-container, .sort-container, .actions {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.sort-container {
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.sort-container h3 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 1.1em;
+}
+
+input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.sort-container button {
+    background: #6c757d;
+    padding: 6px 10px;
+    font-size: 0.9em;
+}
+
+.sort-container button:hover {
+    background: #5a6268;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: #e9ecef;
+}
+
+.result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.no-data, .loading {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.actions button {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background: #28a745 !important;
+}
+
+.btn-delete {
+    background: #dc3545 !important;
+}
+

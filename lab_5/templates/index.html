@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Автобуси</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h1>🚌 Автобусні маршрути</h1>
+
+    <div class="form-container">
+        <input type="text" id="busName" placeholder="Назва маршруту">
+        <input type="number" id="seats" placeholder="Кількість місць">
+        <input type="number" id="price" placeholder="Ціна квитка">
+        <button id="saveBtn">Додати автобус</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Пошук маршруту...">
+        <button id="searchBtn">Пошук</button>
+        <button id="resetBtn">Скинути</button>
+    </div>
+
+    <div class="sort-container">
+        <h3>Сортування:</h3>
+        <button onclick="sortBuses('name', 'asc')">За назвою</button>
+        <button onclick="sortBuses('seats', 'desc')">За місцями</button>
+        <button onclick="sortBuses('price', 'desc')">За ціною</button>
+        <button onclick="resetSort()">Скинути сортування</button>
+    </div>
+
+    <div class="actions">
+        <button id="countSeatsBtn">Порахувати всі місця</button>
+        <button id="countPricesBtn">Порахувати загальну ціну</button>
+    </div>
+
+    <!-- Прибрано елемент для повідомлень пошуку -->
+    <div id="priceCount" class="result"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Маршрут</th>
+                <th>Місця</th>
+                <th>Ціна</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody id="busTable"></tbody>
+    </table>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
